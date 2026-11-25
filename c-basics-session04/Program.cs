@@ -84,9 +84,12 @@
             /*9-Write a method bool TryGetPrice(string title, out double price) that returns true and sets 
               price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it */
 
-            TryGetPrice("Clean Code", out double price);
+            if(TryGetPrice("Clean Code", out double foundPrice))
+                Console.WriteLine(foundPrice);
 
             #endregion
+
+           
         }
         #region bool TryGetPrice(string title, out double price)
         static bool TryGetPrice(string title, out double price)
