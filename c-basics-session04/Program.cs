@@ -74,17 +74,43 @@
               new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length 
               afterward. */
 
-            double [] prices = { 25.5, 40 };
-            ReplaceArray(ref prices);
-            Console.WriteLine(prices.Length);//3 elements 
+            //double [] prices = { 25.5, 40 };
+            //ReplaceArray(ref prices);
+            //Console.WriteLine(prices.Length);//3 elements 
+
+            #endregion
+
+            #region Question 9
+            /*9-Write a method bool TryGetPrice(string title, out double price) that returns true and sets 
+              price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it */
+
+            TryGetPrice("Clean Code", out double price);
 
             #endregion
         }
-        #region ReplaceArray(ref double[] prices)
-        static void ReplaceArray(ref double[] prices)
+        #region bool TryGetPrice(string title, out double price)
+        static bool TryGetPrice(string title, out double price)
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+
+            price = 0;
+            return false;
         }
+
+
+        #endregion
+
+
+
+        #region ReplaceArray(ref double[] prices)
+        //static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
 
 
         #endregion
