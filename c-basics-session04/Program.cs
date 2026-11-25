@@ -102,16 +102,37 @@
             /*11-Using the PrintBookInfo method from the question above, call it by naming the 
              parameters, passing pages before title.*/
 
-            PrintBookInfo(pages: 400, title: "Clean code");
+            //PrintBookInfo(pages: 400, title: "Clean code");
+            #endregion
+
+            #region Question 12
+            /*12 -Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. 
+              Call it with three book titles. */
+
+            PrintAllTitles("Clean code","C# basics","SQL basics");
+
             #endregion
 
 
         }
-        #region PrintBookInfo(string title, int pages = 300)
-        static void PrintBookInfo(string title, int pages = 300)
+        #region PrintAllTitles(params string[] titles)
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"Book title : {title} , Pages : {pages}");
+            foreach (string item in titles)
+            {
+                Console.WriteLine(item);
+            }
         }
+        #endregion
+
+
+
+
+        #region PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Book title : {title} , Pages : {pages}");
+        //}
 
         #endregion
 
