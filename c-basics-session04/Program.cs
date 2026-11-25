@@ -53,17 +53,35 @@
                 see, and why?*/
 
 
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);//call by value but Array are Reference type any change is affect at orignal Array
-            Console.WriteLine(prices[0]);
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);//call by value but Array are Reference type any change is affect at orignal Array
+            //Console.WriteLine(prices[0]);
 
             #endregion
+
+            #region Question 7
+            /*7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. 
+              Call it and print pages afterward. How is the result different from question 5?*/
+
+            int pages = 400;
+            AddBonusPages(ref pages);//call by Reference , we edite value in the orginal value at stored placence 
+
+            Console.WriteLine(pages);//print 400 
+            #endregion
         }
-        #region ApplyDiscount(double[] prices)
-        static void ApplyDiscount(double[] prices)
+
+        #region AddBonusPages(int pages)
+        static void AddBonusPages(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
+        #endregion
+
+        #region ApplyDiscount(double[] prices)
+        //static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
         #endregion
 
         #region AddBonusPages(int pages)
