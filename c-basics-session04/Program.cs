@@ -32,15 +32,33 @@
             /*Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with 
              "Clean Code".*/
 
-            printBookTitle("Clean code");
+            //printBookTitle("Clean code");
+
+            #endregion
+
+            #region Question 5
+            /*5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable 
+              int pages = 400; and print pages afterward. What do you expect to see, and why? */
+            
+            int pages = 400;
+            AddBonusPages(pages);//call by value, we take a copy of pages 
+
+            Console.WriteLine(pages);//print 400 
 
             #endregion
         }
-        #region method PrintBookTitle(string title)
-        static void printBookTitle(string title)
+        #region AddBonusPages(int pages)
+        static void AddBonusPages(int pages)
         {
-            Console.WriteLine($"Book title: {title}");
+            pages += 50;
         }
+        #endregion
+
+        #region method PrintBookTitle(string title)
+        //static void printBookTitle(string title)
+        //{
+        //    Console.WriteLine($"Book title: {title}");
+        //}
 
 
         #endregion
